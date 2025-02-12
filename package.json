@@ -1,15 +1,16 @@
 {
   "name": "apibyteon",
   "version": "1.0.0",
-  "description": "",
+  "private": false,
+  "description": "Generador de proyectos APIByteon - Node - Typescript",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api", "byteon", "nodejs", "typescript"],
+  "author": "Jair Molina",
   "license": "ISC",
   "devDependencies": {
     "@types/dotenv": "^8.2.3",
