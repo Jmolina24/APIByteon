@@ -1,4 +1,4 @@
-# APIByteon 🚀
+# 🚀 APIByteon 🚀
 
 **APIByteon** es una potente y flexible plataforma para el desarrollo de APIs en Node.js, diseñada para ofrecer escalabilidad, seguridad y facilidad de integración. Con una arquitectura modular y configuraciones optimizadas, permite a los desarrolladores desplegar rápidamente servicios backend eficientes y robustos.
 
@@ -73,14 +73,19 @@ npm test
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas  
 
-- **Node.js** + **Express** 🟢
-- **TypeScript** ⚡
-- **MongoDB / SQL Server / PostgreSQL / MySQL** 🗄️
-- **JWT para autenticación** 🔐
-- **Swagger para documentación** 📄
-- **Dotenv para configuración** ⚙️
+- **Node.js** + **Express** 🟢  
+- **TypeScript** ⚡  
+- **Dotenv** para manejo de variables de entorno ⚙️  
+- **Env-var** para validación de variables de entorno 🔍  
+- **Nodemon** para recarga automática 🔄  
+- **Rimraf** para limpieza de archivos temporales 🗑️  
+- **TS-Node** para ejecutar TypeScript sin compilación previa 🚀  
+- **JWT (JSON Web Tokens)** para autenticación 🔐 *(Pendiente de agregar en dependencias)*  
+- **Swagger** para documentación 📄 *(Pendiente de agregar en dependencias)*  
+- **MongoDB / SQL Server / PostgreSQL / MySQL** 🗄️ *(Pendiente de agregar en dependencias si aplica)*  
+
 
 ---
 
@@ -104,5 +109,5 @@ Este proyecto está bajo la licencia **MIT**.
 ## 👤 Autor
 Este proyecto fue desarrollado por Jair Molina, apasionado por la tecnología y el desarrollo de software.
 
-📌 GitHub: Jmolina24
+📌 **GitHub:** [Jmolina24](https://github.com/Jmolina24)  
 
