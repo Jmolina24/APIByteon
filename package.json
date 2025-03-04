@@ -9,7 +9,12 @@
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
   },
-  "keywords": ["api", "byteon", "nodejs", "typescript"],
+  "keywords": [
+    "api",
+    "byteon",
+    "nodejs",
+    "typescript"
+  ],
   "author": "Jair Molina",
   "license": "ISC",
   "devDependencies": {
@@ -24,6 +29,7 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "env-var": "^7.5.0",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mongoose": "^8.12.0"
   }
 }
