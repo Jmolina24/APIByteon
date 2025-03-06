@@ -1,14 +1,14 @@
 import express, { Router } from 'express';
 
-// interface Options {
-//   port: number;
-//   
-//   public_path?: string;
-// }
+
+
+
+
 
 interface Options {
   port: number;
   routes: Router;
+
 }
 
 
@@ -19,15 +19,11 @@ export class Server {
   private readonly port: number;
   private readonly routes: Router;
 
-  // constructor(options: Options) {
-  //   const { port, routes } = options;
-  //   this.port = port;
-  //   
-  // }
 
   constructor(options: Options) {
     const { port, routes } = options;
     this.port = port;
+    
     this.routes = routes;
   }
 
