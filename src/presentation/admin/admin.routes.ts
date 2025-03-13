@@ -18,6 +18,8 @@ export class AdminRoutes {
 
         // Definir las rutas
         router.get('/states', adminController.getlistState );
+        router.post('/states', adminController.createState );
+        router.put('/states/:idState', adminController.updateState );
 
 
         return router;

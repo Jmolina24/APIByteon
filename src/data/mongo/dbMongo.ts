@@ -12,7 +12,6 @@ export class MongoDatabase {
     static async connect(options: ConnectionOptions) {
 
         const { mongoUrl, dbName } = options;
-
         try {
             await mongoose.connect(mongoUrl, {
                 dbName: dbName,
@@ -21,7 +20,7 @@ export class MongoDatabase {
 
         } catch (error) {
             console.log('Mongo Connection Error');
-            throw error;
+            // throw error;
         }
 
     }

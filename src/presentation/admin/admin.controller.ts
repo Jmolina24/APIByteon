@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CustumError, PaginateDto } from "../../domain";
+import { StateDto, CustumError, PaginateDto } from "../../domain";
 import { AdminService } from "../services";
 import { StateModel } from "../../data";
 
@@ -10,7 +10,7 @@ export class AdminController {
 
 
 
-    constructor( 
+    constructor(
         private readonly adminService: AdminService,
     ) { }
 
@@ -29,15 +29,31 @@ export class AdminController {
 
         const { page = 1, limit = 10 } = req.query;
         const [error, paginationDto] = PaginateDto.create(+page, +limit);
-        if (error) return res.status(400).json({ error });
-
-        
-        this.adminService.listStates( paginationDto! )
+        if (error) {
+            res.status(400).json({ error });
+            return;
+        }
+        this.adminService.listStates(paginationDto!)
             .then((states) => res.json(states))
             .catch(error => this.handleError(error, res))
     }
 
 
+    createState = (req: Request, res: Response) => {
+        const [error, createStateDto] = StateDto.validateAndBuild(req.body);
+        if (error) { res.status(400).json({ error }); return }
+        this.adminService.createState(createStateDto!)
+            .then((category) => res.status(201).json(category))
+            .catch(error => this.handleError(error, res));
+    }
+
+    updateState = async (req: Request, res: Response) => {
+        const { idState } = req.params;
+        this.adminService.updateState(idState, req.body)
+        .then((data) => res.json(data))
+        .catch(error => this.handleError(error, res));
+    };
+    
 
 }
 
