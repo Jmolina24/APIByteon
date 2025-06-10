@@ -1,9 +1,9 @@
-import { Validators } from "../../config";
-import { StateModel } from "../../data";
-import { StateDto, CustumError, PaginateDto, } from "../../domain";
+import { Validators } from "../../../config";
+import { StateModel } from "../../../data";
+import { StateDto, CustumError, PaginateDto, } from "../../../domain";
 
 
-export class AdminService {
+export class StateService {
 
     constructor() { }
 

@@ -1,24 +1,24 @@
 import mongoose, { Schema } from "mongoose";
 
 const DocumentTypeSchema = new mongoose.Schema({
-    code: {
+    codeType: {
         type: String,
         required: [true, 'Code is Required'],
-        enum: ['CC', 'NI', 'CE', 'PA'], 
+        enum: ['CC', 'NI', 'CE', 'PA'],
     },
-    name: {
+    nameType: {
         type: String,
         required: [true, 'Name is Required'],
     },
-    stateType: { 
+    stateType: {
         type: Schema.Types.ObjectId,
-        ref: 'State', 
+        ref: 'State',
         required: [true, 'stateType is Required'],
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }    
-});
+    available: {
+        type: Boolean,
+        default: true
+    },
+}, { timestamps: true });
 
 export const DocumentTypeModel = mongoose.model('DocumentType', DocumentTypeSchema);

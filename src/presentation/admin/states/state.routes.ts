@@ -1,8 +1,6 @@
 import { Router } from 'express';
-import { AdminController } from './admin.controller';
-import { AdminService } from '../services';
-
-
+import { AdminController } from './state.controller';
+import { StateService } from '../../services';
 
 
 
@@ -13,19 +11,17 @@ export class AdminRoutes {
 
         const router = Router();
 
-        const adminService = new AdminService();
-        const adminController = new AdminController( adminService );      
+        const stateService = new StateService();
+        const adminController = new AdminController( stateService );
 
         // Definir las rutas
         router.get('/states', adminController.getlistState );
         router.post('/states', adminController.createState );
         router.put('/states/:idState', adminController.updateState );
 
-
         return router;
 
     }
-
 
 }
 

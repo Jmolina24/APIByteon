@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gmi">
+<head>
+	<title>App Encriptador</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="app/assest/images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="app/assest/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="app/assest/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="app/assest/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="app/assest/css/util.css">
+	<link rel="stylesheet" type="text/css" href="app/assest/css/main.css">
+</head>
+<body ng-controller="loginController">	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="app/assest/images/appencritador.png" alt="IMG">
+				</div>
+				<form class="login100-form" ng-submit="validaencryptCredentials()">
+					<span class="login100-form-title"> APP Byteon</span>
+					<div class="wrap-input100">
+						<input class="input100" type="text" id="UID" name="UID" placeholder="UID" autocomplete="off" ng-model="login.uid">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="wrap-input100">
+						<input class="input100" type="text" id="PWD" name="PWD" placeholder="PWD" autocomplete="off" ng-model="login.pwd">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit"> Iniciar Session </button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="app/assest/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js" charset="utf-8"></script>
+	<script src="app/assest/vendor/select2/select2.min.js"></script>
+	<script src="app/assest/vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="app/scripts/controllers/login/loginController.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>

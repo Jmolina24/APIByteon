@@ -1,17 +1,16 @@
 import { Request, Response } from "express";
-import { StateDto, CustumError, PaginateDto } from "../../domain";
-import { AdminService } from "../services";
-import { StateModel } from "../../data";
+import { StateDto, CustumError, PaginateDto } from "../../../domain";
+import { StateService } from "../../services";
 
 
 
 
-export class AdminController {
+export class documentTypeController {
 
 
 
     constructor(
-        private readonly adminService: AdminService,
+        private readonly stateService: StateService,
     ) { }
 
 
@@ -33,7 +32,7 @@ export class AdminController {
             res.status(400).json({ error });
             return;
         }
-        this.adminService.listStates(paginationDto!)
+        this.stateService.listStates(paginationDto!)
             .then((states) => res.json(states))
             .catch(error => this.handleError(error, res))
     }
@@ -42,14 +41,14 @@ export class AdminController {
     createState = (req: Request, res: Response) => {
         const [error, createStateDto] = StateDto.validateAndBuild(req.body);
         if (error) { res.status(400).json({ error }); return }
-        this.adminService.createState(createStateDto!)
-            .then((category) => res.status(201).json(category))
+        this.stateService.createState(createStateDto!)
+            .then((data) => res.status(201).json(data))
             .catch(error => this.handleError(error, res));
     }
 
     updateState = async (req: Request, res: Response) => {
         const { idState } = req.params;
-        this.adminService.updateState(idState, req.body)
+        this.stateService.updateState(idState, req.body)
         .then((data) => res.json(data))
         .catch(error => this.handleError(error, res));
     };

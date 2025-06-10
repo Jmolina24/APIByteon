@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { APIRoutes } from './api/api.routes';
-import { AdminRoutes } from './admin/admin.routes';
+import { AdminRoutes } from './admin/states/state.routes';
 
 
 
