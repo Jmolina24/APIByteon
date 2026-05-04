@@ -28,7 +28,3 @@ stateSchema.set('toJSON', {
 
 
 export const StateModel = mongoose.model('State', stateSchema);
-
-
-
-
